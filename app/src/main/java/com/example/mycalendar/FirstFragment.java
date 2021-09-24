@@ -12,7 +12,7 @@ import com.example.mycalendar.databinding.FragmentFirstBinding;
 
 public class FirstFragment extends Fragment {
 
-    private FragmentFirstBinding binding;
+private FragmentFirstBinding binding;
 
     @Override
     public View onCreateView(
@@ -20,8 +20,8 @@ public class FirstFragment extends Fragment {
             Bundle savedInstanceState
     ) {
 
-        binding = FragmentFirstBinding.inflate(inflater, container, false);
-        return binding.getRoot();
+      binding = FragmentFirstBinding.inflate(inflater, container, false);
+      return binding.getRoot();
 
     }
 
@@ -37,7 +37,7 @@ public class FirstFragment extends Fragment {
         });
     }
 
-    @Override
+@Override
     public void onDestroyView() {
         super.onDestroyView();
         binding = null;
