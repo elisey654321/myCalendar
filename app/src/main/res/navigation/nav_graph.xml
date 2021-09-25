@@ -6,9 +6,13 @@
     app:startDestination="@id/fragment_main">
 
     <fragment
-        android:id="@+id/fragment_main"
-        android:name="com.example.mycalendar.MainFragment"
-        android:label="@string/first_fragment_label"
-        tools:layout="@layout/fragment_main" />
+            android:id="@+id/fragment_main"
+            android:name="com.example.mycalendar.MainFragment"
+            android:label="@string/first_fragment_label"
+            tools:layout="@layout/fragment_main">
+        <action android:id="@+id/button_calendar_list2" app:destination="@id/calendarFragment"/>
+    </fragment>
+    <activity android:id="@+id/calendarFragment" android:name="com.example.mycalendar.CalendarFragment"
+              android:label="fragmen_calendar" tools:layout="@layout/fragmen_calendar"/>
 
 </navigation>

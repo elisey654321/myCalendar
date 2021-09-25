@@ -4,21 +4,21 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent" xmlns:tools="http://schemas.android.com/tools"
         xmlns:app="http://schemas.android.com/apk/res-auto"
-        tools:context=".MainFragment">
+        tools:context=".CalendarFragment">
     <TextView
             android:id="@+id/textview_first"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Главное меню"
+            android:text="Календарь"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintBottom_toTopOf="@id/button_calendar_list"/>
+            app:layout_constraintBottom_toTopOf="@id/button_first_new"/>
     <Button
-            android:id="@+id/button_calendar_list"
+            android:id="@+id/button_first_new"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Календарь"
+            android:text="Назад"
             app:layout_constraintTop_toBottomOf="@id/textview_first"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
