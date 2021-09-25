@@ -19,20 +19,18 @@ public class MainFragment extends Fragment {
             LayoutInflater inflater, ViewGroup container,
             Bundle savedInstanceState
     ) {
-
         binding = ActivityMainBinding.inflate(inflater, container, false);
         return binding.getRoot();
-
     }
 
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-//        binding.button_first_new.setOnClickListener(new View.OnClickListener() {
+//        binding..setOnClickListener(new View.OnClickListener() {
 //            @Override
 //            public void onClick(View view) {
-//                NavHostFragment.findNavController(FirstFragment.this)
-//                        .navigate(R.id.action_FirstFragment_to_SecondFragment);
+////                NavHostFragment.findNavController(FirstFragment.this)
+////                        .navigate(R.id.action_FirstFragment_to_SecondFragment);
 //            }
 //        });
     }
