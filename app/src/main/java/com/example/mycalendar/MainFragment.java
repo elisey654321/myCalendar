@@ -1,18 +1,18 @@
 package com.example.mycalendar;
 
+import android.app.Activity;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.fragment.NavHostFragment;
-import com.example.mycalendar.databinding.FragmentFirstBinding;
+import com.example.mycalendar.databinding.ActivityMainBinding;
 
-public class FirstFragment extends Fragment {
+public class MainFragment extends Fragment {
 
-private FragmentFirstBinding binding;
+    private ActivityMainBinding binding;
 
     @Override
     public View onCreateView(
@@ -20,27 +20,26 @@ private FragmentFirstBinding binding;
             Bundle savedInstanceState
     ) {
 
-      binding = FragmentFirstBinding.inflate(inflater, container, false);
-      return binding.getRoot();
+        binding = ActivityMainBinding.inflate(inflater, container, false);
+        return binding.getRoot();
 
     }
 
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        binding.buttonFirst.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                NavHostFragment.findNavController(FirstFragment.this)
-                        .navigate(R.id.action_FirstFragment_to_SecondFragment);
-            }
-        });
+//        binding.button_first_new.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                NavHostFragment.findNavController(FirstFragment.this)
+//                        .navigate(R.id.action_FirstFragment_to_SecondFragment);
+//            }
+//        });
     }
 
-@Override
+    @Override
     public void onDestroyView() {
         super.onDestroyView();
         binding = null;
     }
-
 }
