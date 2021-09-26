@@ -8,18 +8,18 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.fragment.NavHostFragment;
-import com.example.mycalendar.databinding.ActivityMainBinding;
+import com.example.mycalendar.databinding.FragmentMainBinding;
 
 public class MainFragment extends Fragment {
 
-    private ActivityMainBinding binding;
+    private FragmentMainBinding binding;
 
     @Override
     public View onCreateView(
             LayoutInflater inflater, ViewGroup container,
             Bundle savedInstanceState
     ) {
-        binding = ActivityMainBinding.inflate(inflater, container, false);
+        binding = FragmentMainBinding.inflate(inflater, container, false);
         return binding.getRoot();
     }
 
