@@ -26,13 +26,13 @@ public class MainFragment extends Fragment {
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-//        binding..setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-////                NavHostFragment.findNavController(FirstFragment.this)
-////                        .navigate(R.id.action_FirstFragment_to_SecondFragment);
-//            }
-//        });
+        binding.buttonCalendarList.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                NavHostFragment.findNavController(MainFragment.this)
+                        .navigate(R.id.action_calendarFragment);
+            }
+       });
     }
 
     @Override

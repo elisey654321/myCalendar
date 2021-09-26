@@ -8,14 +8,30 @@
             <LayoutPositions>
               <option name="myPositions">
                 <map>
-                  <entry key="calendarFragment">
+                  <entry key="action_calendarFragment">
                     <value>
                       <LayoutPositions>
                         <option name="myPosition">
                           <Point>
-                            <option name="x" value="137" />
-                            <option name="y" value="-135" />
+                            <option name="x" value="-3" />
+                            <option name="y" value="-134" />
                           </Point>
+                        </option>
+                        <option name="myPositions">
+                          <map>
+                            <entry key="action_calendarFragment">
+                              <value>
+                                <LayoutPositions>
+                                  <option name="myPosition">
+                                    <Point>
+                                      <option name="x" value="34" />
+                                      <option name="y" value="-132" />
+                                    </Point>
+                                  </option>
+                                </LayoutPositions>
+                              </value>
+                            </entry>
+                          </map>
                         </option>
                       </LayoutPositions>
                     </value>
@@ -25,13 +41,13 @@
                       <LayoutPositions>
                         <option name="myPosition">
                           <Point>
-                            <option name="x" value="-133" />
-                            <option name="y" value="-137" />
+                            <option name="x" value="-279" />
+                            <option name="y" value="-133" />
                           </Point>
                         </option>
                         <option name="myPositions">
                           <map>
-                            <entry key="action_fragment_main_to_calendarFragment">
+                            <entry key="button_calendar_list2">
                               <value>
                                 <LayoutPositions />
                               </value>

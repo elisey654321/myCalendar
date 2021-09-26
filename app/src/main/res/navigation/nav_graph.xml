@@ -10,9 +10,19 @@
             android:name="com.example.mycalendar.MainFragment"
             android:label="@string/first_fragment_label"
             tools:layout="@layout/fragment_main">
-        <action android:id="@+id/button_calendar_list2" app:destination="@id/calendarFragment"/>
+        <action android:id="@+id/action_calendarFragment"
+                app:destination="@id/action_calendarFragment"
+        />
     </fragment>
-    <activity android:id="@+id/calendarFragment" android:name="com.example.mycalendar.CalendarFragment"
-              android:label="fragmen_calendar" tools:layout="@layout/fragmen_calendar"/>
+
+    <fragment android:id="@+id/action_calendarFragment"
+              android:name="com.example.mycalendar.CalendarFragment"
+              android:label="@string/first_fragment_label"
+              tools:layout="@layout/fragment_main">
+        <action android:id="@+id/action_action_calendarFragment_to_fragment_main"
+                app:destination="@id/fragment_main"
+        />
+    </fragment>
+
 
 </navigation>
