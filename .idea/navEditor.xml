@@ -13,22 +13,36 @@
                       <LayoutPositions>
                         <option name="myPosition">
                           <Point>
-                            <option name="x" value="-3" />
-                            <option name="y" value="-134" />
+                            <option name="x" value="1" />
+                            <option name="y" value="-146" />
                           </Point>
                         </option>
                         <option name="myPositions">
                           <map>
-                            <entry key="action_calendarFragment">
+                            <entry key="action_action_calendarFragment_to_fragment_main">
                               <value>
-                                <LayoutPositions>
-                                  <option name="myPosition">
-                                    <Point>
-                                      <option name="x" value="34" />
-                                      <option name="y" value="-132" />
-                                    </Point>
-                                  </option>
-                                </LayoutPositions>
+                                <LayoutPositions />
+                              </value>
+                            </entry>
+                          </map>
+                        </option>
+                      </LayoutPositions>
+                    </value>
+                  </entry>
+                  <entry key="action_schedulerFragment">
+                    <value>
+                      <LayoutPositions>
+                        <option name="myPosition">
+                          <Point>
+                            <option name="x" value="2" />
+                            <option name="y" value="156" />
+                          </Point>
+                        </option>
+                        <option name="myPositions">
+                          <map>
+                            <entry key="action_schedulerFragment_to_fragment_main">
+                              <value>
+                                <LayoutPositions />
                               </value>
                             </entry>
                           </map>
@@ -41,13 +55,18 @@
                       <LayoutPositions>
                         <option name="myPosition">
                           <Point>
-                            <option name="x" value="-279" />
-                            <option name="y" value="-133" />
+                            <option name="x" value="-303" />
+                            <option name="y" value="-155" />
                           </Point>
                         </option>
                         <option name="myPositions">
                           <map>
-                            <entry key="button_calendar_list2">
+                            <entry key="action_calendarFragment">
+                              <value>
+                                <LayoutPositions />
+                              </value>
+                            </entry>
+                            <entry key="action_fragment_main_to_schedulerFragment">
                               <value>
                                 <LayoutPositions />
                               </value>

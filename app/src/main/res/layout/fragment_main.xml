@@ -23,6 +23,17 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/button_scheduler_list"
+    />
+    <Button
+            android:id="@+id/button_scheduler_list"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Расписание"
+            app:layout_constraintTop_toBottomOf="@id/button_calendar_list"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
     />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

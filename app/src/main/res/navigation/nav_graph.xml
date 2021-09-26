@@ -13,6 +13,9 @@
         <action android:id="@+id/action_calendarFragment"
                 app:destination="@id/action_calendarFragment"
         />
+        <action android:id="@+id/action_fragment_main_to_schedulerFragment"
+                app:destination="@id/action_schedulerFragment"
+        />
     </fragment>
 
     <fragment android:id="@+id/action_calendarFragment"
@@ -20,6 +23,14 @@
               android:label="@string/first_fragment_label"
               tools:layout="@layout/fragment_main">
         <action android:id="@+id/action_action_calendarFragment_to_fragment_main"
+                app:destination="@id/fragment_main"
+        />
+    </fragment>
+    <fragment android:id="@+id/action_schedulerFragment"
+              android:name="com.example.mycalendar.SchedulerFragment"
+              android:label="fragmen_schedule"
+              tools:layout="@layout/fragmen_schedule">
+        <action android:id="@+id/action_schedulerFragment_to_fragment_main"
                 app:destination="@id/fragment_main"
         />
     </fragment>

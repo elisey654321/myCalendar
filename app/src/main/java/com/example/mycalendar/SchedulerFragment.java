@@ -1,6 +1,5 @@
 package com.example.mycalendar;
 
-import android.app.Activity;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -8,37 +7,28 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.fragment.NavHostFragment;
-import com.example.mycalendar.databinding.FragmentMainBinding;
+import com.example.mycalendar.databinding.FragmenScheduleBinding;
 
-public class MainFragment extends Fragment {
-
-    private FragmentMainBinding binding;
+public class SchedulerFragment extends Fragment {
+    private FragmenScheduleBinding binding;
 
     @Override
     public View onCreateView(
             LayoutInflater inflater, ViewGroup container,
             Bundle savedInstanceState
     ) {
-        binding = FragmentMainBinding.inflate(inflater, container, false);
+        binding = FragmenScheduleBinding.inflate(inflater, container, false);
         return binding.getRoot();
     }
 
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        binding.buttonCalendarList.setOnClickListener(new View.OnClickListener() {
+        binding.buttonBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                NavHostFragment.findNavController(MainFragment.this)
-                        .navigate(R.id.action_calendarFragment);
-            }
-       });
-
-        binding.buttonSchedulerList.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                NavHostFragment.findNavController(MainFragment.this)
-                        .navigate(R.id.action_fragment_main_to_schedulerFragment);
+                NavHostFragment.findNavController(SchedulerFragment.this)
+                        .navigate(R.id.action_schedulerFragment_to_fragment_main);
             }
         });
     }
