@@ -16,6 +16,12 @@
         <action android:id="@+id/action_fragment_main_to_schedulerFragment"
                 app:destination="@id/action_schedulerFragment"
         />
+        <action android:id="@+id/action_fragment_main_to_action_taskFragment"
+                app:destination="@id/action_taskFragment"
+        />
+        <action android:id="@+id/action_fragment_main_to_action_statusFragment"
+                app:destination="@id/action_statusFragment"
+        />
     </fragment>
 
     <fragment android:id="@+id/action_calendarFragment"
@@ -31,6 +37,24 @@
               android:label="fragmen_schedule"
               tools:layout="@layout/fragmen_schedule">
         <action android:id="@+id/action_schedulerFragment_to_fragment_main"
+                app:destination="@id/fragment_main"
+        />
+    </fragment>
+
+    <fragment android:id="@+id/action_taskFragment"
+              android:name="com.example.mycalendar.TaskFragment"
+              android:label="fragmen_schedule"
+              tools:layout="@layout/fragmen_schedule">
+        <action android:id="@+id/action_taskFragment_to_fragment_main"
+                app:destination="@id/fragment_main"
+        />
+    </fragment>
+
+    <fragment android:id="@+id/action_statusFragment"
+              android:name="com.example.mycalendar.StatusFragment"
+              android:label="fragmen_schedule"
+              tools:layout="@layout/fragmen_schedule">
+        <action android:id="@+id/action_statusFragment_to_fragment_main"
                 app:destination="@id/fragment_main"
         />
     </fragment>

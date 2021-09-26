@@ -41,6 +41,22 @@ public class MainFragment extends Fragment {
                         .navigate(R.id.action_fragment_main_to_schedulerFragment);
             }
         });
+
+        binding.buttonTaskList.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                NavHostFragment.findNavController(MainFragment.this)
+                        .navigate(R.id.action_fragment_main_to_action_taskFragment);
+            }
+        });
+
+        binding.buttonStatusList.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                NavHostFragment.findNavController(MainFragment.this)
+                        .navigate(R.id.action_fragment_main_to_action_statusFragment);
+            }
+        });
     }
 
     @Override
