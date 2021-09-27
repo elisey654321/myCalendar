@@ -1,4 +1,4 @@
-package com.example.mycalendar;
+package com.example.mycalendar.fragmen;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -7,6 +7,7 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.fragment.NavHostFragment;
+import com.example.mycalendar.R;
 import com.example.mycalendar.databinding.FragmenScheduleBinding;
 
 public class SchedulerFragment extends Fragment {
