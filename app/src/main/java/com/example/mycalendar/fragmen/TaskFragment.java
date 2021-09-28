@@ -29,10 +29,39 @@ public class TaskFragment extends Fragment {
         binding = FragmenTaskBinding.inflate(inflater, container, false);
 
         List<taskList> mList = new ArrayList<>();;
-        taskList taskList1 = new taskList("Test", 1);
-        mList.add(taskList1);
-//        mList.add(new taskList("Test1",2));
-//        mList.add(new taskList("Test2",3));
+
+        mList.add(new taskList("Test", 1));
+        mList.add(new taskList("Test1",2));
+        mList.add(new taskList("Test2",3));
+        mList.add(new taskList("Test2",3));
+        mList.add(new taskList("Test2",3));
+        mList.add(new taskList("Test2",3));
+        mList.add(new taskList("Test2",3));
+        mList.add(new taskList("Test2",3));
+        mList.add(new taskList("Test2",3));
+        mList.add(new taskList("Test2",3));
+        mList.add(new taskList("Test2",3));
+        mList.add(new taskList("Test1",2));
+        mList.add(new taskList("Test2",3));
+        mList.add(new taskList("Test2",3));
+        mList.add(new taskList("Test2",3));
+        mList.add(new taskList("Test2",3));
+        mList.add(new taskList("Test2",3));
+        mList.add(new taskList("Test2",3));
+        mList.add(new taskList("Test2",3));
+        mList.add(new taskList("Test2",3));
+        mList.add(new taskList("Test2",3));
+        mList.add(new taskList("Test1",2));
+        mList.add(new taskList("Test2",3));
+        mList.add(new taskList("Test2",3));
+        mList.add(new taskList("Test2",3));
+        mList.add(new taskList("Test2",3));
+        mList.add(new taskList("Test2",3));
+        mList.add(new taskList("Test2",3));
+        mList.add(new taskList("Test2",3));
+        mList.add(new taskList("Test2",3));
+        mList.add(new taskList("Test2",3));
+
 
         RecyclerView mRecyclerView = binding.recyclerView;
 
@@ -47,7 +76,6 @@ public class TaskFragment extends Fragment {
         Task_Adapter mAdapter = new Task_Adapter(inflater.getContext(), mList);
         mRecyclerView.setAdapter(mAdapter);
         
-        
         return binding.getRoot();       
     }
 
@@ -59,6 +87,14 @@ public class TaskFragment extends Fragment {
             public void onClick(View view) {
                 NavHostFragment.findNavController(TaskFragment.this)
                         .navigate(R.id.action_taskFragment_to_fragment_main);
+            }
+        });
+
+        binding.buttonAddNewElement.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                NavHostFragment.findNavController(TaskFragment.this)
+                        .navigate(R.id.action_action_taskFragment_to_fragment_task_add);
             }
         });
     }

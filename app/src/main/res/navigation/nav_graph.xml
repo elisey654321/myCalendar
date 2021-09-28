@@ -48,6 +48,8 @@
         <action android:id="@+id/action_taskFragment_to_fragment_main"
                 app:destination="@id/fragment_main"
         />
+        <action android:id="@+id/action_action_taskFragment_to_fragment_task_add"
+                app:destination="@id/fragment_task_add"/>
     </fragment>
 
     <fragment android:id="@+id/action_statusFragment"
@@ -57,6 +59,11 @@
         <action android:id="@+id/action_statusFragment_to_fragment_main"
                 app:destination="@id/fragment_main"
         />
+    </fragment>
+    <fragment android:id="@+id/fragment_task_add" android:name="com.example.mycalendar.fragment_task_add"
+              android:label="fragment_task_add" tools:layout="@layout/fragment_task_add">
+        <action android:id="@+id/action_fragment_task_add_to_action_taskFragment"
+                app:destination="@id/action_taskFragment"/>
     </fragment>
 
 
