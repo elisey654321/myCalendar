@@ -4,11 +4,20 @@
              android:layout_width="match_parent"
              android:layout_height="match_parent"
              tools:context=".fragment_task_add">
-
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <LinearLayout
+            android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="@string/hello_blank_fragment"/>
-
+            android:layout_height="match_parent">
+        <Button
+                android:text="Сохранить"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:id="@+id/button_Save"/>
+        <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:text="Name"
+                android:ems="10"
+                android:id="@+id/editTextTextPersonName"/>
+    </LinearLayout>
 </FrameLayout>

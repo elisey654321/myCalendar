@@ -17,8 +17,8 @@ import android.view.MenuItem;
 
 public class MainActivity extends AppCompatActivity {
 
-    private AppBarConfiguration appBarConfiguration;
     private ActivityMainBinding binding;
+    public Helper_Add_DataBase DB_Class;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,8 +30,9 @@ public class MainActivity extends AppCompatActivity {
         setSupportActionBar(binding.toolbar);
         //NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_main);
 
-        Helper_Add_DataBase myClass_DB = new Helper_Add_DataBase(this,1);
-        //SQLiteDatabase myDB = myClass_DB.getWritableDatabase(); помогает получить базу данных
+        DB_Class = new Helper_Add_DataBase(this,1);
+        SQLiteDatabase db = DB_Class.getWritableDatabase();
+        DB_Class.onUpgrade(db,1,1);
     }
 
 }

@@ -1,9 +1,11 @@
 package com.example.mycalendar.modulesDataBase;
 
+import android.content.ContentValues;
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import androidx.annotation.Nullable;
+import com.example.mycalendar.classesDataBases.taskList;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
@@ -67,6 +69,22 @@ public class Helper_Add_DataBase extends SQLiteOpenHelper {
         array.add(query4);
 
         return array;
+    }
+
+    public void createTask(SQLiteDatabase db, taskList task){
+
+        boolean answer;
+
+        ContentValues cv = new ContentValues();
+        cv.put("Name",task.Name);
+
+        long result = db.insert("taskList",null,cv);
+
+        if(result == -1)
+            answer = false;
+        else
+            answer = true;
+
     }
 
 }

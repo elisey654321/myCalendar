@@ -31,37 +31,6 @@ public class TaskFragment extends Fragment {
         List<taskList> mList = new ArrayList<>();;
 
         mList.add(new taskList("Test", 1));
-        mList.add(new taskList("Test1",2));
-        mList.add(new taskList("Test2",3));
-        mList.add(new taskList("Test2",3));
-        mList.add(new taskList("Test2",3));
-        mList.add(new taskList("Test2",3));
-        mList.add(new taskList("Test2",3));
-        mList.add(new taskList("Test2",3));
-        mList.add(new taskList("Test2",3));
-        mList.add(new taskList("Test2",3));
-        mList.add(new taskList("Test2",3));
-        mList.add(new taskList("Test1",2));
-        mList.add(new taskList("Test2",3));
-        mList.add(new taskList("Test2",3));
-        mList.add(new taskList("Test2",3));
-        mList.add(new taskList("Test2",3));
-        mList.add(new taskList("Test2",3));
-        mList.add(new taskList("Test2",3));
-        mList.add(new taskList("Test2",3));
-        mList.add(new taskList("Test2",3));
-        mList.add(new taskList("Test2",3));
-        mList.add(new taskList("Test1",2));
-        mList.add(new taskList("Test2",3));
-        mList.add(new taskList("Test2",3));
-        mList.add(new taskList("Test2",3));
-        mList.add(new taskList("Test2",3));
-        mList.add(new taskList("Test2",3));
-        mList.add(new taskList("Test2",3));
-        mList.add(new taskList("Test2",3));
-        mList.add(new taskList("Test2",3));
-        mList.add(new taskList("Test2",3));
-
 
         RecyclerView mRecyclerView = binding.recyclerView;
 
