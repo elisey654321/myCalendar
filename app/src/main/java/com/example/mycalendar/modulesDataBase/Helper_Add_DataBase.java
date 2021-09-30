@@ -34,12 +34,14 @@ public class Helper_Add_DataBase extends SQLiteOpenHelper {
     @Override
     public void onUpgrade(SQLiteDatabase sqLiteDatabase, int i, int i1) {
 
-        sqLiteDatabase.execSQL("DROP TABLE IF EXISTS taskList");
-        sqLiteDatabase.execSQL("DROP TABLE IF EXISTS status");
-        sqLiteDatabase.execSQL("DROP TABLE IF EXISTS taskStatus");
-        sqLiteDatabase.execSQL("DROP TABLE IF EXISTS scheduleList");
+        if (i > 0){
+            sqLiteDatabase.execSQL("DROP TABLE IF EXISTS taskList");
+            sqLiteDatabase.execSQL("DROP TABLE IF EXISTS status");
+            sqLiteDatabase.execSQL("DROP TABLE IF EXISTS taskStatus");
+            sqLiteDatabase.execSQL("DROP TABLE IF EXISTS scheduleList");
 
-        onCreate(sqLiteDatabase);
+            onCreate(sqLiteDatabase);
+        }
     }
 
     private List<String> getSQL_query_array(){

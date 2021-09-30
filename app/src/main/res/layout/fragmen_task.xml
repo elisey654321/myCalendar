@@ -13,51 +13,66 @@
             app:layout_constraintTop_toTopOf="parent" app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintBottom_toBottomOf="parent" android:id="@+id/linearLayout">
         <LinearLayout
-                android:orientation="vertical"
+                android:orientation="horizontal"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
-            <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-            >
-
-                <LinearLayout
-                        android:orientation="vertical"
+                android:layout_height="match_parent" app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent">
+            <Space
+                    android:layout_width="10dp"
+                    android:layout_height="wrap_content" android:layout_weight="0"/>
+            <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="395dp"
+                    android:layout_height="wrap_content">
+                <RelativeLayout
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent">
-                    <TextView
-                            android:id="@+id/textview_first"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Задачи"
-                            android:layout_gravity="center"
-                    />
-                    <Button
-                            android:text="Добавить"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:id="@+id/button_AddNewElement"
-                    />
-                    <androidx.recyclerview.widget.RecyclerView
-                            android:layout_width="match_parent"
-                            android:layout_height="617dp"
-                            android:id="@+id/recyclerView">
-                    </androidx.recyclerview.widget.RecyclerView>
-                </LinearLayout>
-                <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="50dp"
-                        android:layout_alignParentBottom="true"
+                        android:layout_height="match_parent"
                 >
-                    <Button
-                            android:id="@+id/button_back"
+
+                    <LinearLayout
+                            android:orientation="vertical"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="Назад"
-                            android:layout_marginTop="1dp"
-                    />
-                </LinearLayout>
-            </RelativeLayout>
+                            android:layout_height="match_parent">
+                        <TextView
+                                android:id="@+id/textview_first"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Задачи"
+                                android:layout_gravity="center"
+                                android:textSize="30dp"
+                        />
+                        <LinearLayout
+                                android:orientation="horizontal"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+                            <Button
+                                    android:text="Добавить"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:id="@+id/button_AddNewElement"
+                            />
+                            <Space
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content" android:layout_weight="1"/>
+                            <Button
+                                    android:id="@+id/button_back"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Назад"
+                            />
+                        </LinearLayout>
+                        <androidx.recyclerview.widget.RecyclerView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/recyclerView">
+                        </androidx.recyclerview.widget.RecyclerView>
+                    </LinearLayout>
+                </RelativeLayout>
+            </LinearLayout>
+            <Space
+                    android:layout_width="10dp"
+                    android:layout_height="wrap_content" android:layout_weight="1"/>
         </LinearLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
 

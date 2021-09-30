@@ -33,6 +33,7 @@ public class Task_Adapter extends RecyclerView.Adapter<Task_Adapter.ViewHolder> 
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         taskList taskListNew = taskList.get(position);
         holder.info_text.setText(taskListNew.Name);
+        holder.text_id.setText(Integer.toString(taskListNew.id));
     }
 
     @Override
@@ -41,10 +42,11 @@ public class Task_Adapter extends RecyclerView.Adapter<Task_Adapter.ViewHolder> 
     }
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
-        final TextView info_text;
+        final TextView info_text,text_id;
         public ViewHolder(View view) {
             super(view);
             info_text = (TextView)view.findViewById(R.id.info_text);
+            text_id = (TextView)view.findViewById(R.id.text_id);
         }
     }
 }
