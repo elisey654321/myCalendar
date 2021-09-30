@@ -1,6 +1,7 @@
 package com.example.mycalendar.fragmen;
 
 import android.content.Context;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -14,6 +15,7 @@ import com.example.mycalendar.R;
 import com.example.mycalendar.classesDataBases.adapter.Task_Adapter;
 import com.example.mycalendar.classesDataBases.taskList;
 import com.example.mycalendar.databinding.FragmenTaskBinding;
+import com.example.mycalendar.modulesDataBase.Helper_Add_DataBase;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -28,9 +30,8 @@ public class TaskFragment extends Fragment {
     ) {
         binding = FragmenTaskBinding.inflate(inflater, container, false);
 
-        List<taskList> mList = new ArrayList<>();;
-
-        mList.add(new taskList("Test", 1));
+        List<taskList> mList = new ArrayList<>();
+        fillTaskList(mList);
 
         RecyclerView mRecyclerView = binding.recyclerView;
 
@@ -73,4 +74,11 @@ public class TaskFragment extends Fragment {
         super.onDestroyView();
         binding = null;
     }
+
+    private void fillTaskList(List<taskList> task_list){
+        Helper_Add_DataBase DB_Helper = new Helper_Add_DataBase(binding.getRoot().getContext(),1);
+        SQLiteDatabase db = DB_Helper.getWritableDatabase();
+        task_list = DB_Helper.getTaskList(db,task_list);
+    }
+
 }

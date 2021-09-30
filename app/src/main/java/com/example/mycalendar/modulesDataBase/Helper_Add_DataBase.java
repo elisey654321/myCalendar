@@ -2,6 +2,7 @@ package com.example.mycalendar.modulesDataBase;
 
 import android.content.ContentValues;
 import android.content.Context;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import androidx.annotation.Nullable;
@@ -87,4 +88,13 @@ public class Helper_Add_DataBase extends SQLiteOpenHelper {
 
     }
 
+    public List<taskList> getTaskList(SQLiteDatabase db, List<taskList> task_list) {
+        Cursor result = db.rawQuery("SELECT * FROM taskList",null);
+
+        while (result.moveToNext()){
+            task_list.add(new taskList(result.getString(0),result.getInt(1)));
+        }
+
+        return task_list;
+    }
 }
