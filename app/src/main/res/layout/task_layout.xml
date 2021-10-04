@@ -28,6 +28,7 @@
                         android:layout_height="40dp"
                         android:id="@+id/text_id"
                         android:layout_weight="0"
+                        android:layout_gravity="center"
                 />
             </LinearLayout>
             <LinearLayout
@@ -37,7 +38,9 @@
                 <TextView
                         android:id="@+id/info_text"
                         android:layout_width="wrap_content"
-                        android:layout_height="40dp"/>
+                        android:layout_height="40dp"
+                        android:layout_gravity="center"
+                />
             </LinearLayout>
         </LinearLayout>
     </androidx.cardview.widget.CardView>

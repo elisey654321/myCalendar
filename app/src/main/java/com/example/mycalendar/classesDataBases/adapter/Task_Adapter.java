@@ -31,9 +31,14 @@ public class Task_Adapter extends RecyclerView.Adapter<Task_Adapter.ViewHolder> 
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        taskList taskListNew = taskList.get(position);
-        holder.info_text.setText(taskListNew.Name);
-        holder.text_id.setText(Integer.toString(taskListNew.id));
+        if (position == 0){
+            holder.info_text.setText("Name");
+            holder.text_id.setText("Id");
+        }else {
+            taskList taskListNew = taskList.get(position);
+            holder.info_text.setText(taskListNew.Name);
+            holder.text_id.setText(Integer.toString(taskListNew.id));
+        }
     }
 
     @Override

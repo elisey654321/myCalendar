@@ -92,7 +92,7 @@ public class Helper_Add_DataBase extends SQLiteOpenHelper {
 
     public List<taskList> getTaskList(SQLiteDatabase db, List<taskList> task_list) {
         Cursor result = db.rawQuery("SELECT * FROM taskList",null);
-
+        task_list.add(new taskList("column",0));
         while (result.moveToNext()){
             task_list.add(new taskList(result.getString(0),result.getInt(1)));
         }
