@@ -132,6 +132,18 @@
                       </LayoutPositions>
                     </value>
                   </entry>
+                  <entry key="fragment_status_add">
+                    <value>
+                      <LayoutPositions>
+                        <option name="myPosition">
+                          <Point>
+                            <option name="x" value="317" />
+                            <option name="y" value="573" />
+                          </Point>
+                        </option>
+                      </LayoutPositions>
+                    </value>
+                  </entry>
                   <entry key="fragment_task_add">
                     <value>
                       <LayoutPositions>
@@ -140,6 +152,15 @@
                             <option name="x" value="317" />
                             <option name="y" value="287" />
                           </Point>
+                        </option>
+                        <option name="myPositions">
+                          <map>
+                            <entry key="action_fragment_task_add_to_action_taskFragment">
+                              <value>
+                                <LayoutPositions />
+                              </value>
+                            </entry>
+                          </map>
                         </option>
                       </LayoutPositions>
                     </value>

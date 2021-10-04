@@ -6,6 +6,7 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import androidx.annotation.Nullable;
+import com.example.mycalendar.classesDataBases.StatusList;
 import com.example.mycalendar.classesDataBases.taskList;
 
 import java.util.ArrayList;
@@ -90,13 +91,38 @@ public class Helper_Add_DataBase extends SQLiteOpenHelper {
 
     }
 
+    public void createStatus(SQLiteDatabase db, StatusList status){
+
+        boolean answer;
+
+        ContentValues cv = new ContentValues();
+        cv.put("Name",status.Name);
+
+        long result = db.insert("status",null,cv);
+
+        if(result == -1)
+            answer = false;
+        else
+            answer = true;
+
+    }
+
     public List<taskList> getTaskList(SQLiteDatabase db, List<taskList> task_list) {
         Cursor result = db.rawQuery("SELECT * FROM taskList",null);
         task_list.add(new taskList("column",0));
         while (result.moveToNext()){
             task_list.add(new taskList(result.getString(0),result.getInt(1)));
         }
-
         return task_list;
     }
+
+    public List<StatusList> getStatusList(SQLiteDatabase db, List<StatusList> Status_list) {
+        Cursor result = db.rawQuery("SELECT * FROM Status",null);
+        Status_list.add(new StatusList("column",0));
+        while (result.moveToNext()){
+            Status_list.add(new StatusList(result.getString(0),result.getInt(1)));
+        }
+        return Status_list;
+    }
+
 }
