@@ -7,26 +7,43 @@
         xmlns:app="http://schemas.android.com/apk/res-auto"
         tools:context=".fragmen.SchedulerFragment">
 
-    <TextView
-            android:id="@+id/textview_first"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Расписание"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintBottom_toTopOf="@id/button_back"
-    />
-
-    <Button
-            android:id="@+id/button_back"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Назад"
-            app:layout_constraintTop_toBottomOf="@id/textview_first"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
-    />
+    <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+            <TextView
+                    android:id="@+id/textview_first"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Расписание"
+                    android:textSize="30dp" android:layout_gravity="center"/>
+            <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                <Button
+                        android:text="Добавить"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:id="@+id/addScheduler" android:layout_weight="0"/>
+                <Space
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:layout_weight="1"/>
+                <Button
+                        android:id="@+id/button_back"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Назад"
+                />
+            </LinearLayout>
+            <androidx.recyclerview.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+            </androidx.recyclerview.widget.RecyclerView>
+        </LinearLayout>
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

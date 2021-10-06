@@ -1,4 +1,4 @@
-package com.example.mycalendar;
+package com.example.mycalendar.fragmen;
 
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
@@ -8,8 +8,8 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.fragment.NavHostFragment;
+import com.example.mycalendar.R;
 import com.example.mycalendar.classesDataBases.StatusList;
-import com.example.mycalendar.classesDataBases.taskList;
 import com.example.mycalendar.databinding.FragmentStatusAddBinding;
 import com.example.mycalendar.modulesDataBase.Helper_Add_DataBase;
 

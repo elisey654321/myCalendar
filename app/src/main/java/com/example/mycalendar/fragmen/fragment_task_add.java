@@ -1,4 +1,4 @@
-package com.example.mycalendar;
+package com.example.mycalendar.fragmen;
 
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
@@ -8,10 +8,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import androidx.navigation.fragment.NavHostFragment;
-import com.example.mycalendar.classesDataBases.StatusList;
+import com.example.mycalendar.R;
 import com.example.mycalendar.classesDataBases.taskList;
 import com.example.mycalendar.databinding.FragmentTaskAddBinding;
-import com.example.mycalendar.fragmen.StatusFragment;
 import com.example.mycalendar.modulesDataBase.Helper_Add_DataBase;
 
 public class fragment_task_add extends Fragment {
